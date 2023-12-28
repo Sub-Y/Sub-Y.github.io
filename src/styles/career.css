@@ -1,0 +1,163 @@
+.career-section {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	height: fit-content;
+	position: relative;
+}
+
+.join {
+	margin: 88px 0 150px 0;
+}
+
+.career-section h2 {
+	color: #eae9e9;
+	font-weight: 900;
+	font-size: 77px;
+	/* 텍스트 뒤로 */
+	position: absolute;
+	transition: all 1s;
+	z-index: -1;
+}
+
+.career-section h3 {
+	font-size: 31px;
+	font-weight: 700;
+	color: #676767;
+	transition: all 1s;
+	top: 50px;
+}
+
+.career-section .join-text {
+	width: 90%;
+	font-size: 23px;
+	color: #676767;
+	top: 55px;
+	font-weight: 300;
+	transition: all 1s;
+	line-height: 30px;
+}
+
+.position-list {
+	flex-direction: column;
+	top: 55px;
+}
+
+.list-content {
+	font-size: 23px;
+	font-weight: 300;
+	height: 160px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	background-color: #eae9e9;
+	border-radius: 40px;
+	transition: all 1s;
+}
+
+/* under 1920px */
+@media (max-width: 1920px) {
+	.join {
+		margin: 88px 0 150px 0;
+	}
+
+	.career-section h2 {
+		font-size: 65px;
+	}
+
+	.career-section h3 {
+		font-size: 30px;
+		top: 45px;
+	}
+
+	.career-section .join-text {
+		font-size: 21px;
+		top: 50px;
+		line-height: 27px;
+	}
+
+	.position-list {
+		top: 45px;
+	}
+}
+
+/* tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+	.join {
+		margin: 88px 0 150px 0;
+	}
+
+	.career-section h2 {
+		font-weight: 900;
+		font-size: 50px;
+	}
+
+	.career-section h3 {
+		font-size: 27px;
+		top: 30px;
+	}
+
+	.career-section .join-text {
+		font-size: 20px;
+		top: 40px;
+		line-height: 26px;
+	}
+
+	.position-list {
+		top: 30px;
+	}
+
+	.list-content {
+		font-size: 20px;
+		height: 130px;
+		width: 90%;
+	}
+
+	.Y {
+		left: 100px;
+	}
+}
+
+/* mobile */
+@media (max-width: 576px) {
+	.careers {
+		margin-top: 0;
+	}
+
+	.join {
+		margin: 35px 0 60px 0;
+	}
+
+	.career-section h2 {
+		font-size: 30px;
+	}
+
+	.career-section h3 {
+		font-size: 17px;
+		top: 18px;
+	}
+
+	.career-section .join-text {
+		font-size: 14px;
+		top: 23px;
+		line-height: 20px;
+	}
+
+	.position-list {
+		top: 19px;
+	}
+
+	.list-content {
+		font-size: 11px;
+		height: 50px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 5px 10px;
+		border-radius: 10px;
+		width: 90%;
+	}
+
+	.Y {
+		display: none;
+	}
+}

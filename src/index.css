@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	cursor: url(../public/CursorLogo.png) 10 10, auto;
+}
+
+html {
+	width: 100%;
+	overflow-x: hidden;
+	height: 100%;
+	/* font-family: "S-CoreDream-3Light";
+	font-size: 20px; */
+}
+body {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
+.scene,
+canvas {
+	/* width: 3072px;
+    height: 1586px; */
+	width: 100vw;
+	height: 100vh;
+	/* height: 1440px; */
+}
+
+h1,
+h2,
+h3,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a.black {
+	color: #000;
+}
+
+/* 커서 잔상 */
+.custom-cursor {
+	position: fixed;
+	width: 15px;
+	height: 15px;
+	background-image: url(../public/CursorLogo.png);
+	background-size: cover;
+	pointer-events: none;
+	z-index: 105;
+}
