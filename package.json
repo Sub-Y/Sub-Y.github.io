@@ -39,8 +39,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
-		"homepage": "https://Sub-y.github.io/Sub-Y.github.io/"
+		"deploy": "gh-pages -d build"
 	},
 	"browserslist": {
 		"production": [
@@ -56,5 +55,6 @@
 	},
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-	}
+	},
+	"homepage": "https://Sub-y.github.io/Sub-Y.github.io/"
 }
