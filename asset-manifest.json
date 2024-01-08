@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/sub-y.github.io/static/css/main.9fd60e79.css",
-    "main.js": "/sub-y.github.io/static/js/main.9df1a2d2.js",
-    "static/js/787.9265b2a6.chunk.js": "/sub-y.github.io/static/js/787.9265b2a6.chunk.js",
-    "static/media/DS2.png": "/sub-y.github.io/static/media/DS2.3a994751e12803e2ba65.png",
-    "static/media/DS4.png": "/sub-y.github.io/static/media/DS4.6c42b5bb629ad8fc6e33.png",
-    "static/media/DS1.png": "/sub-y.github.io/static/media/DS1.cdd0577808407bd1e49a.png",
-    "static/media/office.jpg": "/sub-y.github.io/static/media/office.15b99a1f883af3c63e67.jpg",
-    "static/media/DS3.png": "/sub-y.github.io/static/media/DS3.7ad9b17176b2479cf1de.png",
-    "static/media/building.jpg": "/sub-y.github.io/static/media/building.cebe08864f3623204735.jpg",
-    "static/media/Y.png": "/sub-y.github.io/static/media/Y.cb6eb6fdf6030e45936f.png",
-    "index.html": "/sub-y.github.io/index.html",
-    "main.9fd60e79.css.map": "/sub-y.github.io/static/css/main.9fd60e79.css.map",
-    "main.9df1a2d2.js.map": "/sub-y.github.io/static/js/main.9df1a2d2.js.map",
-    "787.9265b2a6.chunk.js.map": "/sub-y.github.io/static/js/787.9265b2a6.chunk.js.map"
+    "main.css": "/Sub-Y.github.io/static/css/main.9fd60e79.css",
+    "main.js": "/Sub-Y.github.io/static/js/main.cf5476a3.js",
+    "static/js/787.9265b2a6.chunk.js": "/Sub-Y.github.io/static/js/787.9265b2a6.chunk.js",
+    "static/media/DS2.png": "/Sub-Y.github.io/static/media/DS2.3a994751e12803e2ba65.png",
+    "static/media/DS4.png": "/Sub-Y.github.io/static/media/DS4.6c42b5bb629ad8fc6e33.png",
+    "static/media/DS1.png": "/Sub-Y.github.io/static/media/DS1.cdd0577808407bd1e49a.png",
+    "static/media/office.jpg": "/Sub-Y.github.io/static/media/office.15b99a1f883af3c63e67.jpg",
+    "static/media/DS3.png": "/Sub-Y.github.io/static/media/DS3.7ad9b17176b2479cf1de.png",
+    "static/media/building.jpg": "/Sub-Y.github.io/static/media/building.cebe08864f3623204735.jpg",
+    "static/media/Y.png": "/Sub-Y.github.io/static/media/Y.cb6eb6fdf6030e45936f.png",
+    "index.html": "/Sub-Y.github.io/index.html",
+    "main.9fd60e79.css.map": "/Sub-Y.github.io/static/css/main.9fd60e79.css.map",
+    "main.cf5476a3.js.map": "/Sub-Y.github.io/static/js/main.cf5476a3.js.map",
+    "787.9265b2a6.chunk.js.map": "/Sub-Y.github.io/static/js/787.9265b2a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9fd60e79.css",
-    "static/js/main.9df1a2d2.js"
+    "static/js/main.cf5476a3.js"
   ]
 }
