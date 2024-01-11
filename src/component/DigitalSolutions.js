@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../styles/service.css";
 import throttle from "lodash/throttle";
 import DSModal1 from "./DSModal1";
@@ -10,14 +10,13 @@ import DS2 from "../image/DS2.png";
 import DS3 from "../image/DS3.png";
 import DS4 from "../image/DS4.png";
 import { FormattedMessage } from "react-intl";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function DigitalSolutions() {
 	const [modalOpen1, setModalOpen1] = useState(false);
 	const [modalOpen2, setModalOpen2] = useState(false);
 	const [modalOpen3, setModalOpen3] = useState(false);
 	const [modalOpen4, setModalOpen4] = useState(false);
-
 	const sliderRef = useRef(null);
 
 	function toggleModal1() {
@@ -33,6 +32,29 @@ export default function DigitalSolutions() {
 		setModalOpen4(!modalOpen4);
 	}
 
+	/* esc 버튼 클릭 시 모달 닫힘 */
+	useEffect(() => {
+		const close = (e) => {
+			if (e.key === "Escape") {
+				if (modalOpen1) {
+					toggleModal1();
+				} else if (modalOpen2) {
+					toggleModal2();
+				} else if (modalOpen3) {
+					toggleModal3();
+				} else if (modalOpen4) {
+					toggleModal4();
+				}
+			}
+		};
+
+		window.addEventListener("keydown", close);
+
+		return () => {
+			window.removeEventListener("keydown", close);
+		};
+	}, [modalOpen1, modalOpen2, modalOpen3, modalOpen4]);
+
 	const handleScroll = throttle((e) => {
 		if (sliderRef.current) {
 			sliderRef.current.scrollLeft += e.deltaY * 5; // deltaY 값에 따라 가로 스크롤을 조절
@@ -42,14 +64,11 @@ export default function DigitalSolutions() {
 	const closeModalOnOutsideClick = () => {
 		if (modalOpen1) {
 			toggleModal1();
-		}
-		if (modalOpen2) {
+		} else if (modalOpen2) {
 			toggleModal2();
-		}
-		if (modalOpen3) {
+		} else if (modalOpen3) {
 			toggleModal3();
-		}
-		if (modalOpen4) {
+		} else if (modalOpen4) {
 			toggleModal4();
 		}
 	};
@@ -135,10 +154,12 @@ export default function DigitalSolutions() {
 					</section>{" "}
 				</motion.div>
 			</div>
-			{modalOpen1 && <DSModal1 toggleModal1={toggleModal1} />}
-			{modalOpen2 && <DSModal2 toggleModal2={toggleModal2} />}
-			{modalOpen3 && <DSModal3 toggleModal3={toggleModal3} />}
-			{modalOpen4 && <DSModal4 toggleModal4={toggleModal4} />}
+			<AnimatePresence wait>
+				{modalOpen1 && <DSModal1 toggleModal1={toggleModal1} />}
+				{modalOpen2 && <DSModal2 toggleModal2={toggleModal2} />}
+				{modalOpen3 && <DSModal3 toggleModal3={toggleModal3} />}
+				{modalOpen4 && <DSModal4 toggleModal4={toggleModal4} />}
+			</AnimatePresence>
 		</>
 	);
 }

@@ -40,7 +40,7 @@
 }
 
 /* tablet */
-@media (min-width: 577px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 1024px) {
 	#wrap {
 		min-height: calc(100% - 3vh);
 	}

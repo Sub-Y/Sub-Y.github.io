@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/service.css";
 import throttle from "lodash/throttle";
 import CDModal1 from "./CDModal1";
@@ -8,7 +8,7 @@ import DS1 from "../image/DS1.png";
 import DS2 from "../image/DS2.png";
 import DS3 from "../image/DS3.png";
 import { FormattedMessage } from "react-intl";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CreativeDesign() {
 	const [modalOpen1, setModalOpen1] = useState(false);
@@ -26,6 +26,27 @@ export default function CreativeDesign() {
 		setModalOpen3(!modalOpen3);
 	}
 
+	/* esc 버튼 클릭 시 모달 닫힘 */
+	useEffect(() => {
+		const close = (e) => {
+			if (e.key === "Escape") {
+				if (modalOpen1) {
+					toggleModal1();
+				} else if (modalOpen2) {
+					toggleModal2();
+				} else if (modalOpen3) {
+					toggleModal3();
+				}
+			}
+		};
+
+		window.addEventListener("keydown", close);
+
+		return () => {
+			window.removeEventListener("keydown", close);
+		};
+	}, [modalOpen1, modalOpen2, modalOpen3]);
+
 	const handleScroll = throttle((e) => {
 		if (sliderRef.current) {
 			sliderRef.current.scrollLeft += e.deltaY * 6; // deltaY 값에 따라 가로 스크롤을 조절
@@ -35,11 +56,9 @@ export default function CreativeDesign() {
 	const closeModalOnOutsideClick = () => {
 		if (modalOpen1) {
 			toggleModal1();
-		}
-		if (modalOpen2) {
+		} else if (modalOpen2) {
 			toggleModal2();
-		}
-		if (modalOpen3) {
+		} else if (modalOpen3) {
 			toggleModal3();
 		}
 	};
@@ -109,9 +128,11 @@ export default function CreativeDesign() {
 					</section>{" "}
 				</motion.div>
 			</div>
-			{modalOpen1 && <CDModal1 toggleModal1={toggleModal1} />}
-			{modalOpen2 && <CDModal2 toggleModal2={toggleModal2} />}
-			{modalOpen3 && <CDModal3 toggleModal3={toggleModal3} />}
+			<AnimatePresence wait>
+				{modalOpen1 && <CDModal1 toggleModal1={toggleModal1} />}
+				{modalOpen2 && <CDModal2 toggleModal2={toggleModal2} />}
+				{modalOpen3 && <CDModal3 toggleModal3={toggleModal3} />}
+			</AnimatePresence>
 		</>
 	);
 }

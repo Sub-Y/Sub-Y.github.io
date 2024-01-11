@@ -76,7 +76,7 @@
 }
 
 /* tablet */
-@media (min-width: 577px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 1024px) {
 	.body {
 		width: 85%;
 		margin: 160px 0 120px 100px;

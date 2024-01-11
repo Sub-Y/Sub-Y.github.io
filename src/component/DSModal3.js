@@ -17,7 +17,7 @@ export default function DSModal3({ toggleModal3 }) {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			transition={{ duration: 0.4 }}
+			transition={{ duration: 0.3 }}
 		>
 			<div className="modal-container">
 				<PiXCircleLight className="closeButton" onClick={toggleModal3} />

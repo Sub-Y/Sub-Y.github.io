@@ -290,7 +290,7 @@
 }
 
 /* tablet */
-@media (min-width: 577px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 1024px) {
 	.logo {
 		left: 25px;
 		top: 25px;

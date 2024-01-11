@@ -52,7 +52,7 @@
 }
 
 /* tablet */
-@media (min-width: 577px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 1024px) {
 	.footer {
 		height: 3vh;
 	}

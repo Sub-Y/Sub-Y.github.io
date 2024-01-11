@@ -34,7 +34,6 @@ document.addEventListener("mousemove", function (e) {
 	function updateCursor() {
 		posX += (e.clientX - posX - cursorSize / 3) * 0.2;
 		posY += (e.clientY - posY - cursorSize / 3) * 0.2;
-
 		cursor.style.left = posX + "px";
 		cursor.style.top = posY + "px";
 
@@ -61,12 +60,12 @@ setInterval(() => {
 		const trailingCursor = trailingCursors.shift();
 		removeTrailingCursor(trailingCursor);
 	}
-}, 0);
+}, 25);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	// <React.StrictMode>
-	<BrowserRouter>
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<IntlProvider locale={local} messages={English}>
 			<ScrollToTop />
 			<App />
